@@ -1,0 +1,253 @@
+.user-stats {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.stats-header {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.stats-header h3 {
+  color: #fbbf24;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stats-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item:last-of-type {
+  border-bottom: none;
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.stat-value {
+  color: #10b981;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bonus-indicator {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: #1f2937;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.add-token-btn {
+  margin-top: 8px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-token-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.add-token-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.loading-spinner .spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .user-stats {
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 14px;
+  }
+  
+  .stats-header h3 {
+    font-size: 15px;
+  }
+  
+  .stat-item {
+    padding: 11px 0;
+  }
+  
+  .stat-label, .stat-value {
+    font-size: 13px;
+  }
+  
+  .bonus-indicator {
+    font-size: 9px;
+    padding: 2px 5px;
+  }
+  
+  .add-token-btn {
+    padding: 11px 15px;
+    font-size: 13px;
+    gap: 6px;
+  }
+  
+  .btn-icon {
+    width: 16px;
+    height: 16px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-stats {
+    padding: 16px;
+    margin-top: 18px;
+  }
+  
+  .stats-header h3 {
+    font-size: 14px;
+  }
+  
+  .stat-item {
+    padding: 10px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .stat-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .stat-value {
+    font-size: 13px;
+    align-self: flex-end;
+  }
+  
+  .bonus-indicator {
+    font-size: 8px;
+    padding: 1px 4px;
+  }
+  
+  .add-token-btn {
+    padding: 10px 14px;
+    font-size: 12px;
+    gap: 6px;
+    margin-top: 6px;
+  }
+  
+  .btn-icon {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+  }
+  
+  .loading-spinner .spinner {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .user-stats {
+    padding: 14px;
+    margin-top: 16px;
+  }
+  
+  .stats-header h3 {
+    font-size: 13px;
+  }
+  
+  .stat-item {
+    padding: 8px 0;
+  }
+  
+  .stat-label {
+    font-size: 11px;
+  }
+  
+  .stat-value {
+    font-size: 12px;
+  }
+  
+  .add-token-btn {
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+  
+  .btn-icon {
+    width: 14px;
+    height: 14px;
+    font-size: 9px;
+  }
+}

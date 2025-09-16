@@ -1,0 +1,42 @@
+{
+  "name": "qc7-presale-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "QC7 Coin Presale Website - Early Access with 10% Bonus",
+  "keywords": [
+    "QC7",
+    "presale",
+    "coin",
+    "ethereum",
+    "crypto"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@reown/appkit": "^1.8.4",
+    "@reown/appkit-adapter-ethers": "^1.8.4",
+    "@reown/appkit-siwe": "^1.8.4",
+    "@rollup/rollup-win32-x64-msvc": "^4.50.1",
+    "ethers": "^6.15.0",
+    "framer-motion": "^12.23.12",
+    "gsap": "^3.13.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "vite": "^7.1.2"
+  }
+}

@@ -1,0 +1,80 @@
+.connect-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.wallet-info {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px 16px;
+  backdrop-filter: blur(10px);
+}
+
+.wallet-address {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Style the AppKit button */
+appkit-button {
+  --w3m-color-mix: #0f172a;
+  --w3m-color-mix-strength: 95%;
+  --w3m-font-family: 'Inter', sans-serif;
+  --w3m-border-radius-master: 12px;
+  --w3m-accent: #10b981;
+  width: 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .connect-button-container {
+    gap: 10px;
+  }
+  
+  .wallet-info {
+    padding: 7px 14px;
+    border-radius: 7px;
+  }
+  
+  .wallet-address {
+    font-size: 11px;
+  }
+  
+  appkit-button {
+    --w3m-border-radius-master: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .connect-button-container {
+    gap: 8px;
+  }
+  
+  .wallet-info {
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+  
+  .wallet-address {
+    font-size: 10px;
+  }
+  
+  appkit-button {
+    --w3m-border-radius-master: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .wallet-info {
+    padding: 5px 10px;
+  }
+  
+  .wallet-address {
+    font-size: 9px;
+  }
+}

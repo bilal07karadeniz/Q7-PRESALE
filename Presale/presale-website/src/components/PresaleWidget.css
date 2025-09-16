@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.presale-widget {
+  max-width: 480px;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.presale-widget::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.presale-widget > * {
+  position: relative;
+  z-index: 1;
+}
+
+.widget-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.countdown {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.countdown h3 {
+  color: #fbbf24;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.time-blocks {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.time-block {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(217, 119, 6, 0.2) 100%);
+  border-radius: 12px;
+  padding: 16px 12px;
+  min-width: 70px;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.time-value {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fbbf24;
+  line-height: 1;
+}
+
+.time-label {
+  display: block;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+  text-transform: capitalize;
+}
+
+.progress-section {
+  margin-bottom: 32px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #059669 50%, #047857 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.progress-percentage {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.purchase-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.payment-toggle {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.toggle-btn.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.toggle-btn:hover:not(.active) {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.amount-input {
+  position: relative;
+}
+
+.amount-input input {
+  width: 100%;
+  padding: 16px 60px 16px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.amount-input input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.amount-input input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.currency {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fbbf24;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.quote-display {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(29, 78, 216, 0.1) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.quote-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+.quote-row:last-of-type {
+  margin-bottom: 12px;
+}
+
+.highlight {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.bonus-info {
+  text-align: center;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bonus-label {
+  color: #fbbf24;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.buy-button {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.buy-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+.buy-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.buy-button.loading {
+  cursor: not-allowed;
+}
+
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  color: #fca5a5;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .presale-widget {
+    max-width: 90vw;
+    margin: 20px auto;
+    padding: 28px;
+  }
+  
+  .title {
+    font-size: 30px;
+  }
+  
+  .subtitle {
+    font-size: 15px;
+  }
+  
+  .time-blocks {
+    gap: 12px;
+  }
+  
+  .time-block {
+    min-width: 65px;
+    padding: 14px 10px;
+  }
+  
+  .time-value {
+    font-size: 22px;
+  }
+  
+  .time-label {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .presale-widget {
+    max-width: 95vw;
+    margin: 12px auto;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .title {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+  }
+  
+  .countdown {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .countdown h3 {
+    font-size: 13px;
+    margin-bottom: 14px;
+  }
+  
+  .time-blocks {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .time-block {
+    min-width: 60px;
+    padding: 12px 8px;
+    flex: 1;
+    max-width: 70px;
+  }
+  
+  .time-value {
+    font-size: 18px;
+  }
+  
+  .time-label {
+    font-size: 10px;
+  }
+  
+  .progress-section {
+    margin-bottom: 24px;
+  }
+  
+  .progress-info {
+    font-size: 13px;
+  }
+  
+  .progress-percentage {
+    font-size: 11px;
+  }
+  
+  .purchase-form {
+    gap: 16px;
+  }
+  
+  .toggle-btn {
+    padding: 10px 12px;
+    font-size: 13px;
+    gap: 6px;
+  }
+  
+  .amount-input input {
+    padding: 14px 50px 14px 14px;
+    font-size: 15px;
+  }
+  
+  .currency {
+    right: 14px;
+    font-size: 13px;
+    gap: 4px;
+  }
+  
+  .quote-display {
+    padding: 14px;
+  }
+  
+  .quote-row {
+    font-size: 13px;
+  }
+  
+  .bonus-label {
+    font-size: 12px;
+  }
+  
+  .buy-button {
+    padding: 14px;
+    font-size: 15px;
+  }
+  
+  .error-message {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .presale-widget {
+    margin: 8px auto;
+    padding: 16px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .time-blocks {
+    gap: 6px;
+  }
+  
+  .time-block {
+    min-width: 55px;
+    padding: 10px 6px;
+  }
+  
+  .time-value {
+    font-size: 16px;
+  }
+  
+  .toggle-btn {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  
+  .amount-input input {
+    padding: 12px 45px 12px 12px;
+    font-size: 14px;
+  }
+  
+  .currency {
+    right: 12px;
+    font-size: 12px;
+  }
+  
+  .buy-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
